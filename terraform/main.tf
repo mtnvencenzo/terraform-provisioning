@@ -19,11 +19,11 @@ provider "azurerm" {
 }
 
 module "latest_project" {
-  source            = "./projects/latest"
-  global_environment        = var.global_environment
-  location                  = var.location
-  sub                       = var.sub
-  sequence                  = var.sequence
+  source             = "./projects/latest"
+  global_environment = var.global_environment
+  location           = var.location
+  sub                = var.sub
+  sequence           = var.sequence
 
   providers = {
     azurerm     = azurerm,
