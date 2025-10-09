@@ -1,12 +1,12 @@
-name: cicd-terraform
+name: cicd-terraform-provisioning
 
 on:
   pull_request:
     branches: [main]
-    paths: [terraform/**, .github/workflows/ado-terraform-cicd.yaml]
+    paths: [terraform/**, .github/workflows/terraform-provisioning-cicd.yaml]
   push:
     branches: [main]
-    paths: [terraform/**, .github/workflows/ado-terraform-cicd.yaml]
+    paths: [terraform/**, .github/workflows/terraform-provisioning-cicd.yaml]
 
   workflow_dispatch:
 
