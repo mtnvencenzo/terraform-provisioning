@@ -42,7 +42,6 @@ terraform-provisioning (This Repository - God Access)
 │       └── latest/                # Latest project infrastructure
 │           ├── providers.tf       # Provider configurations
 │           ├── variables.tf       # Project-specific variables
-│           ├── acr.tf            # Azure Container Registry
 │           ├── appr-latest-project.tf  # Service principal and app registration
 │           ├── resource-group-*.tf     # Resource group definitions
 │           └── terraform-storage-*.tf  # Terraform state storage containers
@@ -70,7 +69,6 @@ The "latest" project currently provisions:
 - **Permissions**: Contributor access to Terraform storage account and assigned resource groups
 
 #### Additional Resources
-- Azure Container Registry (ACR)
 - Terraform state storage containers for each component
 
 ## ✅ Prerequisites
