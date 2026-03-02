@@ -3,10 +3,6 @@ terraform {
     azurerm = {
       source = "hashicorp/azurerm"
     }
-
-    azuredevops = {
-      source = "microsoft/azuredevops"
-    }
   }
 }
 

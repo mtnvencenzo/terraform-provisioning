@@ -145,8 +145,7 @@ module "api_project" {
   sequence          = var.sequence
 
   providers = {
-    azurerm     = azurerm,
-    azuredevops = azuredevops
+    azurerm     = azurerm
   }
 }
 ```

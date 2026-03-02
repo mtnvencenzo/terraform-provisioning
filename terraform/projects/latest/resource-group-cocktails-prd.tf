@@ -39,3 +39,18 @@ resource "azurerm_role_assignment" "latest_project_prd_cocktails_resource_group_
     azuread_service_principal.app_reg_latest_project_service_principal
   ]
 }
+
+
+resource "azurerm_role_assignment" "cezzis_platform_onprem_prd_cocktails_resource_group_contributor_auth_role_assignment" {
+  scope                = azurerm_resource_group.latest_project_prd_cocktails_resource_group.id
+  role_definition_name = "Contributor"
+  principal_id         = azuread_service_principal.app_reg_cezzis_platform_onprem_service_principal.object_id
+
+  lifecycle {
+    prevent_destroy = false
+  }
+  depends_on = [
+    azurerm_resource_group.latest_project_prd_cocktails_resource_group,
+    azuread_service_principal.app_reg_cezzis_platform_onprem_service_principal
+  ]
+}
