@@ -2,12 +2,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "=4.16.0"
-    }
-
-    azuredevops = {
-      source  = "microsoft/azuredevops"
-      version = "=1.6.0"
+      version = "=4.58.0"
     }
   }
 
@@ -26,7 +21,6 @@ module "latest_project" {
   sequence           = var.sequence
 
   providers = {
-    azurerm     = azurerm,
-    azuredevops = azuredevops
+    azurerm     = azurerm
   }
 }
