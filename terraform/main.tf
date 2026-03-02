@@ -21,6 +21,6 @@ module "latest_project" {
   sequence           = var.sequence
 
   providers = {
-    azurerm     = azurerm
+    azurerm = azurerm
   }
 }
