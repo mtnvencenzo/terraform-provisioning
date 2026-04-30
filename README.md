@@ -126,46 +126,6 @@ terraform plan -var-file="environment_vars/prd.tfvars"
 terraform apply -var-file="environment_vars/prd.tfvars"
 ```
 
-## 💡 Usage Examples
-
-### Adding a New Project
-
-To add a new project (e.g., "api-project"):
-
-1. Create a new module directory: `terraform/projects/api-project/`
-2. Define the required resource groups and service principals
-3. Add the module reference to `main.tf`:
-
-```terraform
-module "api_project" {
-  source             = "./projects/api-project"
-  global_environment = var.global_environment
-  location          = var.location
-  sub               = var.sub
-  sequence          = var.sequence
-
-  providers = {
-    azurerm     = azurerm
-  }
-}
-```
-
-## 🔒 Security Considerations
-
-- Service principals are created with minimum required permissions
-- Resource groups provide isolation between projects
-- Terraform state is stored securely in Azure Storage
-- All resources include lifecycle rules to prevent accidental deletion
-
-
-## 🌐 Community & Support
-
-- 🤝 **Contributing Guide** – review expectations and workflow in [CONTRIBUTING.md](./.github/CONTRIBUTING.md)  
-- 🤗 **Code of Conduct** – help us keep the community welcoming by reading [CODE_OF_CONDUCT.md](./.github/CODE_OF_CONDUCT.md)  
-- 🆘 **Support Guide** – find help channels in [SUPPORT.md](./.github/SUPPORT.md)  
-- 🔒 **Security Policy** – report vulnerabilities responsibly via [SECURITY.md](./.github/SECURITY.md) 
-
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
